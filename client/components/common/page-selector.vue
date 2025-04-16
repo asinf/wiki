@@ -2,11 +2,11 @@
   v-dialog(
     v-model='isShown'
     max-width='850px'
-    overlay-color='blue darken-4'
+    overlay-color='red darken-4'
     overlay-opacity='.7'
     )
     v-card.page-selector
-      .dialog-header.is-blue
+      .dialog-header.is-red
         v-icon.mr-3(color='white') mdi-page-next-outline
         .body-1(v-if='mode === `create`') {{$t('common:pageSelector.createTitle')}}
         .body-1(v-else-if='mode === `move`') {{$t('common:pageSelector.moveTitle')}}
@@ -44,7 +44,7 @@
                 template(slot='prepend', slot-scope='{ item, open, leaf }')
                   v-icon mdi-{{ open ? 'folder-open' : 'folder' }}
         v-flex(xs7)
-          v-toolbar(color='blue darken-2', dark, dense, flat)
+          v-toolbar(color='red darken-2', dark, dense, flat)
             .body-2 {{$t('common:pageSelector.pages')}}
             //- v-spacer
             //- v-btn(icon, tile, disabled): v-icon mdi-content-save-move-outline

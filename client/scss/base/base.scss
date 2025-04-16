@@ -85,8 +85,16 @@ html {
     background-color: darken(mc('blue', '900'), 20%) !important;
     border-color: darken(mc('blue', '900'), 20%) !important;
   }
+  .red.darken-5 {
+    background-color: darken(mc('red', '900'), 20%) !important;
+    border-color: darken(mc('red', '900'), 20%) !important;
+  }
   .indigo.darken-5 {
     background-color: darken(mc('indigo', '900'), 10%) !important;
     border-color: darken(mc('indigo', '900'), 10%) !important;
+  }
+  .deep-purple.darken-5 {
+    background-color: darken(mc('deep-purple', '900'), 10%) !important;
+    border-color: darken(mc('deep-purple', '900'), 10%) !important;
   }
 }

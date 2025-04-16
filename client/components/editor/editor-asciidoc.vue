@@ -602,8 +602,8 @@ $editor-ascii-height-mobile: calc(100vh - 112px - 16px);
   }
 
   &-toolbar {
-    background-color: mc('blue', '700');
-    background-image: linear-gradient(to bottom, mc('blue', '700') 0%, mc('blue','800') 100%);
+    background-color: mc('red', '700');
+    background-image: linear-gradient(to bottom, mc('red', '700') 0%, mc('red','800') 100%);
     color: #FFF;
 
     .v-toolbar__content {

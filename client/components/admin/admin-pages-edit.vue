@@ -33,11 +33,11 @@
             v-list(dense, nav)
               v-list-item(:href='`/` + page.locale + `/` + page.path')
                 v-list-item-icon
-                  v-icon(color='indigo') mdi-text-subject
+                  v-icon(color='deep-purple') mdi-text-subject
                 v-list-item-title View
               v-list-item(:href='`/e/` + page.locale + `/` + page.path')
                 v-list-item-icon
-                  v-icon(color='indigo') mdi-pencil
+                  v-icon(color='deep-purple') mdi-pencil
                 v-list-item-title Edit
               v-list-item(@click='', disabled)
                 v-list-item-icon
@@ -49,11 +49,11 @@
                 v-list-item-title Unpublish
               v-list-item(:href='`/s/` + page.locale + `/` + page.path')
                 v-list-item-icon
-                  v-icon(color='indigo') mdi-code-tags
+                  v-icon(color='deep-purple') mdi-code-tags
                 v-list-item-title View Source
               v-list-item(:href='`/h/` + page.locale + `/` + page.path')
                 v-list-item-icon
-                  v-icon(color='indigo') mdi-history
+                  v-icon(color='deep-purple') mdi-history
                 v-list-item-title View History
               v-list-item(@click='', disabled)
                 v-list-item-icon
@@ -206,7 +206,7 @@ export default {
     },
     async rerenderPage() {
       this.$store.commit('showNotification', {
-        style: 'indigo',
+        style: 'deep-purple',
         message: `Coming soon...`,
         icon: 'directions_boat'
       })

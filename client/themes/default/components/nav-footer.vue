@@ -64,11 +64,11 @@ export default {
       background: mc('theme', 'primary');
 
       span {
-        color: mc('blue', '300');
+        color: mc('red', '300');
       }
 
       a {
-        color: mc('blue', '200');
+        color: mc('red', '200');
       }
     }
   }

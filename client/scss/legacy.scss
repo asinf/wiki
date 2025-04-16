@@ -120,14 +120,14 @@ body {
       border: none;
       border-radius: 5px;
       margin: 0 auto;
-      background-color: mc('blue', '700');
+      background-color: mc('red', '700');
       color: #FFF;
       cursor: pointer;
       margin-top: 1rem;
       font-weight: 600;
 
       &:hover {
-        background-color: mc('blue', '800');
+        background-color: mc('red', '800');
       }
     }
   }
@@ -214,7 +214,7 @@ body {
       align-items: center;
 
       &:hover {
-        color: mc('blue', '500');
+        color: mc('red', '500');
       }
     }
   }
@@ -233,7 +233,7 @@ body {
 
 .sidebar {
   width: 256px;
-  background-color: mc('blue', '700');
+  background-color: mc('red', '700');
   color: #FFF;
   padding: 8px 0;
   align-self: stretch;
@@ -333,7 +333,7 @@ body {
     font-size: 13px;
     height: 40px;
     display: flex;
-    color: mc('blue', '600');
+    color: mc('red', '600');
     align-items: center;
     font-weight: 500;
     padding: 0 16px;

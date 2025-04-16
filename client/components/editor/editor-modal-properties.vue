@@ -17,7 +17,7 @@
         v-icon(left) mdi-check
         span {{ $t('common:actions.ok') }}
     v-card(tile)
-      v-tabs(color='white', background-color='blue darken-1', dark, centered, v-model='currentTab')
+      v-tabs(color='white', background-color='red darken-1', dark, centered, v-model='currentTab')
         v-tab {{$t('editor:props.info')}}
         v-tab {{$t('editor:props.scheduling')}}
         v-tab(:disabled='!hasScriptPermission') {{$t('editor:props.scripts')}}

@@ -373,10 +373,10 @@ $editor-height-mobile: calc(100vh - 56px - 16px);
     color: #e0e0e0;
   }
   .cm-s-wikijs-dark div.CodeMirror-selected {
-    background: mc('blue','800');
+    background: mc('red','800');
   }
   .cm-s-wikijs-dark .cm-matchhighlight {
-    background: mc('blue','800');
+    background: mc('red','800');
   }
   .cm-s-wikijs-dark .CodeMirror-line::selection, .cm-s-wikijs-dark .CodeMirror-line > span::selection, .cm-s-wikijs-dark .CodeMirror-line > span > span::selection {
     background: mc('amber', '500');

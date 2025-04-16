@@ -69,7 +69,7 @@
       v-flex(lg9, xs12)
         v-card.wiki-form.animated.fadeInUp
           v-toolbar(
-            color='indigo'
+            color='deep-purple'
             dark
             flat
             dense
@@ -103,14 +103,14 @@
                 :hint='cfg.value.hint ? cfg.value.hint : ""'
                 persistent-hint
                 :class='cfg.value.hint ? "mb-2" : ""'
-                color='indigo'
+                color='deep-purple'
               )
               v-switch(
                 v-else-if='cfg.value.type === "boolean"'
                 :key='cfg.key'
                 :label='cfg.value.title'
                 v-model='cfg.value.value'
-                color='indigo'
+                color='deep-purple'
                 :hint='cfg.value.hint ? cfg.value.hint : ""'
                 persistent-hint
                 inset
@@ -124,7 +124,7 @@
                 :hint='cfg.value.hint ? cfg.value.hint : ""'
                 persistent-hint
                 :class='cfg.value.hint ? "mb-2" : ""'
-                color='indigo'
+                color='deep-purple'
                 )
               v-divider.my-5(v-if='idx < currentRenderer.config.length - 1')
           v-card-chin

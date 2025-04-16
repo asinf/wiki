@@ -18,7 +18,7 @@
   // ---------------------------------
 
   a {
-    color: mc('blue', '700');
+    color: mc('red', '700');
 
     &.is-internal-link.is-invalid-page {
       color: mc('red', '700');
@@ -43,7 +43,7 @@
     }
 
     @at-root .theme--dark & {
-      color: mc('blue', '200');
+      color: mc('red', '200');
     }
   }
 
@@ -85,7 +85,7 @@
 
   h1 {
     padding: 0;
-    color: mc('blue', '800');
+    color: mc('red', '800');
     margin-top: 2rem;
     position: relative;
 
@@ -104,7 +104,7 @@
       border-radius: 3px;
 
       @at-root .theme--dark & {
-        background: linear-gradient(to right, mc('blue', '300') 0%, mc('blue', '500') 10%, rgba(mc('blue', '900'), 0) 100%);
+        background: linear-gradient(to right, mc('red', '300') 0%, mc('red', '500') 10%, rgba(mc('red', '900'), 0) 100%);
       }
 
       @at-root .is-rtl & {
@@ -274,23 +274,23 @@
     }
 
     &.is-info {
-      background-color: mc('blue', '50');
-      border-color: mc('blue', '300');
-      color: mc('blue', '900');
+      background-color: mc('red', '50');
+      border-color: mc('red', '300');
+      color: mc('red', '900');
 
       &::before {
         content: "\F02FC";
       }
 
       code:not([class^="language-"]) {
-        background-color: mc('blue', '50');
-        color: mc('blue', '800');
+        background-color: mc('red', '50');
+        color: mc('red', '800');
       }
 
       @at-root .theme--dark & {
-        background-color: mc('blue', '900');
-        color: mc('blue', '50');
-        border-color: mc('blue', '500');
+        background-color: mc('red', '900');
+        color: mc('red', '50');
+        border-color: mc('red', '500');
       }
     }
     &.is-warning {
@@ -389,19 +389,19 @@
 
     &.note {
       td.icon {
-        background-color: mc('blue', '300');
-        color: mc('blue', '50');
+        background-color: mc('red', '300');
+        color: mc('red', '50');
         &::before {
           content: "\F02FC";
         }
       }
       td.content {
-        color: darken(mc('blue', '900'), 10%);
-        background-color: mc('blue', '50');
+        color: darken(mc('red', '900'), 10%);
+        background-color: mc('red', '50');
 
         @at-root .theme--dark & {
-          background-color: mc('blue', '900');
-          color: mc('blue', '50');
+          background-color: mc('red', '900');
+          color: mc('red', '50');
         }
       }
     }
@@ -550,13 +550,13 @@
         }
 
         &:hover {
-          background-image: linear-gradient(to bottom, #FFF, lighten(mc('blue', '50'), 4%));
-          border-left-color: mc('blue', '500');
+          background-image: linear-gradient(to bottom, #FFF, lighten(mc('red', '50'), 4%));
+          border-left-color: mc('red', '500');
           cursor: pointer;
 
           @at-root .is-rtl & {
             border-left-color: mc('grey', '200');
-            border-right-width: mc('blue', '500');
+            border-right-width: mc('red', '500');
           }
         }
 
@@ -609,12 +609,12 @@
 
           &:hover {
             background-image: linear-gradient(to bottom, lighten(mc('grey', '900'), 2%), darken(mc('grey', '900'), 3%));
-            border-left-color: mc('indigo', '300');
+            border-left-color: mc('deep-purple', '300');
             cursor: pointer;
 
             @at-root .theme--dark.is-rtl & {
               border-left-color: mc('grey', '900');
-              border-right-width: mc('indigo', '300');
+              border-right-width: mc('deep-purple', '300');
             }
           }
         }
@@ -715,9 +715,9 @@
   // ---------------------------------
 
   code {
-    background-color: mc('indigo', '50');
+    background-color: mc('deep-purple', '50');
     padding: 0 5px;
-    color: mc('indigo', '800');
+    color: mc('deep-purple', '800');
     font-family: 'Roboto Mono', monospace;
     font-weight: normal;
     font-size: 1rem;
@@ -729,7 +729,7 @@
 
     @at-root .theme--dark & {
       background-color: darken(mc('grey', '900'), 5%);
-      color: mc('indigo', '100');
+      color: mc('deep-purple', '100');
     }
   }
 
