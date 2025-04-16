@@ -10,7 +10,7 @@ export default {
   props: {
     color: {
       type: String,
-      default: 'blue'
+      default: 'red'
     },
     icon: {
       type: String,

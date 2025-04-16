@@ -26,25 +26,25 @@
             persistent-hint
             )
           v-divider.mt-4
-          v-subheader.pl-2: strong.indigo--text {{$t('admin:api.newKeyPermissionScopes')}}
+          v-subheader.pl-2: strong.deep-purple--text {{$t('admin:api.newKeyPermissionScopes')}}
           v-list.pl-8(nav)
             v-list-item-group(v-model='fullAccess')
               v-list-item(
                 :value='true'
-                active-class='indigo--text'
+                active-class='deep-purple--text'
                 )
                 template(v-slot:default='{ active, toggle }')
                   v-list-item-action
                     v-checkbox(
                       :input-value='active'
                       :true-value='true'
-                      color='indigo'
+                      color='deep-purple'
                       @click='toggle'
                     )
                   v-list-item-content
                     v-list-item-title {{$t('admin:api.newKeyFullAccess')}}
             v-divider.mt-3
-            v-subheader.caption.indigo--text {{$t('admin:api.newKeyGroupPermissions')}}
+            v-subheader.caption.deep-purple--text {{$t('admin:api.newKeyGroupPermissions')}}
             v-list-item
               v-select(
                 :disabled='fullAccess'
@@ -52,7 +52,7 @@
                 item-text='name'
                 item-value='id'
                 outlined
-                color='indigo'
+                color='deep-purple'
                 v-model='group'
                 :label='$t(`admin:api.newKeyGroup`)'
                 :hint='$t(`admin:api.newKeyGroupHint`)'

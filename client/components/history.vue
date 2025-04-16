@@ -6,9 +6,9 @@
         .subheading Viewing history of #[strong /{{path}}]
         template(v-if='$vuetify.breakpoint.mdAndUp')
           v-spacer
-          .caption.blue--text.text--lighten-3.mr-4 Trail Length: {{total}}
-          .caption.blue--text.text--lighten-3 ID: {{pageId}}
-          v-btn.ml-4(depressed, color='blue darken-1', @click='goLive') Return to Live Version
+          .caption.red--text.text--lighten-3.mr-4 Trail Length: {{total}}
+          .caption.red--text.text--lighten-3 ID: {{pageId}}
+          v-btn.ml-4(depressed, color='red darken-1', @click='goLive') Return to Live Version
       v-container(fluid, grid-list-xl)
         v-layout(row, wrap)
           v-flex(xs12, md4)
@@ -561,7 +561,7 @@ export default {
 
 .history {
   &-promptmenu {
-    border-top: 5px solid mc('blue', '700');
+    border-top: 5px solid mc('red', '700');
   }
 
   .d2h-file-wrapper {

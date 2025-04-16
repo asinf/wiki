@@ -260,7 +260,7 @@ export default {
     },
     comingSoon() {
       this.$store.commit('showNotification', {
-        style: 'indigo',
+        style: 'deep-purple',
         message: `Coming soon...`,
         icon: 'directions_boat'
       })

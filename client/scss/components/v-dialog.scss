@@ -1,7 +1,7 @@
 .dialog-header {
-  background-color: mc('blue', '700');
-  background-image: radial-gradient(ellipse at top, mc('blue', '500'), mc('blue', '700')),
-                    radial-gradient(ellipse at bottom, mc('blue', '800'), mc('blue', '700'));
+  background-color: mc('red', '700');
+  background-image: radial-gradient(ellipse at top, mc('red', '500'), mc('red', '700')),
+                    radial-gradient(ellipse at bottom, mc('red', '800'), mc('red', '700'));
   height: 60px;
   color: #FFF;
   display: flex;
@@ -25,6 +25,12 @@
     background-color: mc('indigo', '700');
     background-image: radial-gradient(ellipse at top, mc('indigo', '500'), mc('indigo', '700')),
                       radial-gradient(ellipse at bottom, mc('indigo', '800'), mc('indigo', '700'));
+  }
+
+  &.is-deep-purple {
+    background-color: mc('deep-purple', '700');
+    background-image: radial-gradient(ellipse at top, mc('deep-purple', '500'), mc('deep-purple', '700')),
+                      radial-gradient(ellipse at bottom, mc('deep-purple', '800'), mc('deep-purple', '700'));
   }
 
   &.is-dark {

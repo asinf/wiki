@@ -28,7 +28,7 @@
           //-       v-icon mdi-menu
           //-   v-list(nav, :light='!$vuetify.theme.dark', :dark='$vuetify.theme.dark', :class='$vuetify.theme.dark ? `grey darken-4` : ``')
           //-     v-list-item.pl-4(href='/')
-          //-       v-list-item-avatar(size='24'): v-icon(color='blue') mdi-home
+          //-       v-list-item-avatar(size='24'): v-icon(color='red') mdi-home
           //-       v-list-item-title.body-2 {{$t('common:header.home')}}
           //-     v-list-item.pl-4(@click='')
           //-       v-list-item-avatar(size='24'): v-icon(color='grey lighten-2') mdi-file-tree
@@ -79,7 +79,7 @@
         v-toolbar.nav-header-inner.pr-4(color='black', dark, flat)
           v-spacer
           .navHeaderLoading.mr-3
-            v-progress-circular(indeterminate, color='blue', :size='22', :width='2' v-show='isLoading')
+            v-progress-circular(indeterminate, color='red', :size='22', :width='2' v-show='isLoading')
 
           slot(name='actions')
 
@@ -113,7 +113,7 @@
               v-list(nav)
                 template(v-for='(lc, idx) of locales')
                   v-list-item(@click='changeLocale(lc)')
-                    v-list-item-action(style='min-width:auto;'): v-chip(:color='lc.code === locale ? `blue` : `grey`', small, label, dark) {{lc.code.toUpperCase()}}
+                    v-list-item-action(style='min-width:auto;'): v-chip(:color='lc.code === locale ? `red` : `grey`', small, label, dark) {{lc.code.toUpperCase()}}
                     v-list-item-title {{lc.name}}
             v-divider(vertical)
 
@@ -138,26 +138,26 @@
               v-list(nav, :light='!$vuetify.theme.dark', :dark='$vuetify.theme.dark', :class='$vuetify.theme.dark ? `grey darken-4` : ``')
                 .overline.pa-4.grey--text {{$t('common:header.currentPage')}}
                 v-list-item.pl-4(@click='pageView', v-if='mode !== `view`')
-                  v-list-item-avatar(size='24', tile): v-icon(color='indigo') mdi-file-document-outline
+                  v-list-item-avatar(size='24', tile): v-icon(color='deep-purple') mdi-file-document-outline
                   v-list-item-title.body-2 {{$t('common:header.view')}}
                 v-list-item.pl-4(@click='pageEdit', v-if='mode !== `edit` && hasWritePagesPermission')
-                  v-list-item-avatar(size='24', tile): v-icon(color='indigo') mdi-file-document-edit-outline
+                  v-list-item-avatar(size='24', tile): v-icon(color='deep-purple') mdi-file-document-edit-outline
                   v-list-item-title.body-2 {{$t('common:header.edit')}}
                 v-list-item.pl-4(@click='pageHistory', v-if='mode !== `history` && hasReadHistoryPermission')
-                  v-list-item-avatar(size='24', tile): v-icon(color='indigo') mdi-history
+                  v-list-item-avatar(size='24', tile): v-icon(color='deep-purple') mdi-history
                   v-list-item-content
                     v-list-item-title.body-2 {{$t('common:header.history')}}
                 v-list-item.pl-4(@click='pageSource', v-if='mode !== `source` && hasReadSourcePermission')
-                  v-list-item-avatar(size='24', tile): v-icon(color='indigo') mdi-code-tags
+                  v-list-item-avatar(size='24', tile): v-icon(color='deep-purple') mdi-code-tags
                   v-list-item-title.body-2 {{$t('common:header.viewSource')}}
                 v-list-item.pl-4(@click='pageConvert', v-if='hasWritePagesPermission')
-                  v-list-item-avatar(size='24', tile): v-icon(color='indigo') mdi-lightning-bolt
+                  v-list-item-avatar(size='24', tile): v-icon(color='deep-purple') mdi-lightning-bolt
                   v-list-item-title.body-2 {{$t('common:header.convert')}}
                 v-list-item.pl-4(@click='pageDuplicate', v-if='hasWritePagesPermission')
-                  v-list-item-avatar(size='24', tile): v-icon(color='indigo') mdi-content-duplicate
+                  v-list-item-avatar(size='24', tile): v-icon(color='deep-purple') mdi-content-duplicate
                   v-list-item-title.body-2 {{$t('common:header.duplicate')}}
                 v-list-item.pl-4(@click='pageMove', v-if='hasManagePagesPermission')
-                  v-list-item-avatar(size='24', tile): v-icon(color='indigo') mdi-content-save-move-outline
+                  v-list-item-avatar(size='24', tile): v-icon(color='deep-purple') mdi-content-save-move-outline
                   v-list-item-content
                     v-list-item-title.body-2 {{$t('common:header.move')}}
                 v-list-item.pl-4(@click='pageDelete', v-if='hasDeletePagesPermission')
@@ -210,7 +210,7 @@
             v-list(nav)
               v-list-item.py-3.grey(:class='$vuetify.theme.dark ? `darken-4-l5` : `lighten-5`')
                 v-list-item-avatar
-                  v-avatar.blue(v-if='picture.kind === `initials`', :size='40')
+                  v-avatar.red(v-if='picture.kind === `initials`', :size='40')
                     span.white--text.subheading {{picture.initials}}
                   v-avatar(v-else-if='picture.kind === `image`', :size='40')
                     v-img(:src='picture.url')
@@ -218,7 +218,7 @@
                   v-list-item-title {{name}}
                   v-list-item-subtitle {{email}}
               //- v-list-item(href='/w', disabled)
-              //-   v-list-item-action: v-icon(color='blue') mdi-view-compact-outline
+              //-   v-list-item-action: v-icon(color='red') mdi-view-compact-outline
               //-   v-list-item-content
               //-     v-list-item-title {{$t('common:header.myWiki')}}
               //-     v-list-item-subtitle.overline Coming soon
@@ -458,7 +458,7 @@ export default {
     assets () {
       // window.location.assign(`/f`)
       this.$store.commit('showNotification', {
-        style: 'indigo',
+        style: 'deep-purple',
         message: `Coming soon...`,
         icon: 'ferry'
       })
