@@ -148,12 +148,12 @@ export default {
         margin-bottom: 0;
         padding-bottom: 17px;
         padding-top: 13px;
-        color: mc('blue', '700');
-        border-top: 3px solid mc('blue', '700');
+        color: mc('red', '700');
+        border-top: 3px solid mc('red', '700');
 
         @at-root .theme--dark & {
           background-color: #292929;
-          color: mc('blue', '300');
+          color: mc('red', '300');
         }
       }
 

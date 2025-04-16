@@ -29,7 +29,7 @@
                     )
                     template(slot='item', slot-scope='data')
                       v-list-item-avatar
-                        v-icon.blue--text(dark) mdi-image-filter-frames
+                        v-icon.red--text(dark) mdi-image-filter-frames
                       v-list-item-content
                         v-list-item-title(v-html='data.item.text')
                         v-list-item-sub-title(v-html='data.item.author')
@@ -84,9 +84,9 @@
               //-       td
               //-         span {{ thm.item.author }}
               //-       td.text-xs-center
-              //-         v-progress-circular(v-if='thm.item.isDownloading', indeterminate, color='blue', size='20', :width='2')
+              //-         v-progress-circular(v-if='thm.item.isDownloading', indeterminate, color='red', size='20', :width='2')
               //-         v-btn(v-else-if='thm.item.isInstalled && thm.item.installDate < thm.item.updatedAt', icon)
-              //-           v-icon.blue--text mdi-cached
+              //-           v-icon.red--text mdi-cached
               //-         v-btn(v-else-if='thm.item.isInstalled', icon)
               //-           v-icon.green--text mdi-check-bold
               //-         v-btn(v-else, icon)

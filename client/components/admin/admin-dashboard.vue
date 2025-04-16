@@ -19,7 +19,7 @@
               easing='easeOutQuint'
               )
       v-flex(xs12 md6 lg4 xl3 d-flex)
-        v-card.blue.darken-3.dashboard-card.animated.fadeInUp.wait-p2s(dark)
+        v-card.red.darken-3.dashboard-card.animated.fadeInUp.wait-p2s(dark)
           v-card-text
             v-icon.dashboard-icon mdi-account
             .overline {{$t('admin:dashboard.users')}}
@@ -30,7 +30,7 @@
               easing='easeOutQuint'
               )
       v-flex(xs12 md6 lg4 xl3 d-flex)
-        v-card.blue.darken-4.dashboard-card.animated.fadeInUp.wait-p4s(dark)
+        v-card.red.darken-4.dashboard-card.animated.fadeInUp.wait-p4s(dark)
           v-card-text
             v-icon.dashboard-icon mdi-account-group
             .overline {{$t('admin:dashboard.groups')}}
@@ -100,7 +100,7 @@
               .subtitle-1 {{$t('admin:contribute.title')}}
               .body-2.mt-3: strong {{$t('admin:dashboard.contributeSubtitle')}}
               .body-2 {{$t('admin:dashboard.contributeHelp')}}
-              v-btn.mx-0.mt-4(:color='$vuetify.theme.dark ? `indigo lighten-3` : `indigo`', outlined, small, to='/contribute')
+              v-btn.mx-0.mt-4(:color='$vuetify.theme.dark ? `deep-purple lighten-3` : `deep-purple`', outlined, small, to='/contribute')
                 .caption: strong {{$t('admin:dashboard.contributeLearnMore')}}
 
 </template>
@@ -221,7 +221,7 @@ export default {
 
 .dashboard-contribute {
   background-color: #FFF;
-  background-image: linear-gradient(to bottom, #FFF 0%, lighten(mc('indigo', '50'), 3%) 100%);
+  background-image: linear-gradient(to bottom, #FFF 0%, lighten(mc('deep-purple', '50'), 3%) 100%);
   border-radius: 7px;
 
   @at-root .theme--dark & {
@@ -232,7 +232,7 @@ export default {
   .v-card__text {
     display: flex;
     align-items: center;
-    color: mc('indigo', '500') !important;
+    color: mc('deep-purple', '500') !important;
 
     @at-root .theme--dark & {
       color: mc('grey', '300') !important;
