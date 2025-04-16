@@ -12,12 +12,12 @@
             )
             transition(name='fadeUp')
               v-card.elevation-5.md2(v-show='isShown')
-                v-toolbar(color='indigo', flat, dense, dark)
+                v-toolbar(color='deep-purple', flat, dense, dark)
                   v-spacer
                   .subheading {{ $t('auth:registerTitle') }}
                   v-spacer
                 v-card-text.text-center
-                  h1.display-1.indigo--text.py-2 {{ siteTitle }}
+                  h1.display-1.deep-purple--text.py-2 {{ siteTitle }}
                   .body-2 {{ $t('auth:registerSubTitle') }}
                   v-text-field.md2.mt-3(
                     solo
@@ -28,7 +28,7 @@
                     ref='iptEmail'
                     v-model='email'
                     :placeholder='$t("auth:fields.email")'
-                    color='indigo'
+                    color='deep-purple'
                     )
                   v-text-field.md2.mt-2(
                     solo
@@ -41,7 +41,7 @@
                     @click:append='() => (hidePassword = !hidePassword)'
                     :type='hidePassword ? "password" : "text"'
                     :placeholder='$t("auth:fields.password")'
-                    color='indigo'
+                    color='deep-purple'
                     loading
                     counter='255'
                     )
@@ -57,7 +57,7 @@
                     @click:append='() => (hidePassword = !hidePassword)'
                     type='password'
                     :placeholder='$t("auth:fields.verifyPassword")'
-                    color='indigo'
+                    color='deep-purple'
                   )
                   v-text-field.md2.mt-2(
                     solo
@@ -68,7 +68,7 @@
                     v-model='name'
                     :placeholder='$t("auth:fields.name")'
                     @keyup.enter='register'
-                    color='indigo'
+                    color='deep-purple'
                     counter='255'
                     )
                 v-card-actions.pb-4
@@ -78,7 +78,7 @@
                     max-width='250px'
                     large
                     dark
-                    color='indigo'
+                    color='deep-purple'
                     @click='register'
                     rounded
                     :loading='isLoading'
@@ -263,7 +263,7 @@ export default {
 
 <style lang="scss">
   .register {
-    background-color: mc('indigo', '900');
+    background-color: mc('deep-purple', '900');
     background-image: url('../static/svg/motif-blocks.svg');
     background-repeat: repeat;
     background-size: 200px;

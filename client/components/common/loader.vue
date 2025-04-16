@@ -27,7 +27,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'blue darken-3'
+      default: 'red darken-3'
     },
     title: {
       type: String,
