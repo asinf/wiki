@@ -6,12 +6,15 @@ permissions:
   contents: write
 
 env:
-  REL_VERSION: v2.5.307
+  REL_VERSION: v2.5.308
 
 jobs:
   build:
     name: Build and create GitHub Release
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: write
 
     steps:
     - uses: actions/checkout@v4
@@ -23,23 +26,34 @@ jobs:
         jq --arg vs "$REL_VERSION" -r '. + {dev:false, version:$vs}' pkg-temp.json > package.json
         rm pkg-temp.json
         cat package.json
-    - name: Build Docker images
+
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and push Docker images
       uses: docker/build-push-action@v5
       with:
         context: .
         file: dev/build/Dockerfile
+        push: true
         tags: |
-          fsinfo/wiki:canary
-          fsinfo/wiki:canary-${{ env.REL_VERSION }}
+          ghcr.io/asinf/wiki:canary
+          ghcr.io/asinf/wiki:canary-${{ env.REL_VERSION }}
+
     - name: Extract compiled files
       run: |
         mkdir -p _dist
-        docker create --name wiki fsinfo/wiki:canary-$REL_VERSION
+        docker create --name wiki ghcr.io/asinf/wiki:canary-$REL_VERSION
         docker cp wiki:/wiki _dist
         docker rm wiki
         rm _dist/wiki/config.yml
         cp ./config.sample.yml _dist/wiki/config.sample.yml
         find _dist/wiki/ -printf "%P\n" | tar -czf wiki-js.tar.gz --no-recursion -C _dist/wiki/ -T -
+
     - name: Update GitHub Release
       uses: softprops/action-gh-release@v2
       with:
