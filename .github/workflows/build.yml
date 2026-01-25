@@ -6,7 +6,7 @@ permissions:
   contents: write
 
 env:
-  REL_VERSION: v2.5.308
+  REL_VERSION: v2.5.311
 
 jobs:
   build:
